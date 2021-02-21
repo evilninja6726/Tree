@@ -11,9 +11,8 @@ public class ChildrenSumProperty {
     }
 
     public static boolean childrenSumProperty(Node root) {
+        if (root == null) return true;
         if (root.left == null && root.right == null)
-            return true;
-        if (root.left.data + root.right.data == root.data)
             return true;
         int sum = 0;
         if (root.left != null)
